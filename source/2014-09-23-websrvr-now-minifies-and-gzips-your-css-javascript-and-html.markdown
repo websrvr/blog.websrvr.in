@@ -1,7 +1,7 @@
 ---
 title: websrvr now minifies and gzips your css, javascript and html
 date: 2014-09-23
-tags: performance gzip minification
+tags: performance, gzip, minification
 ---
 
 I have deployed a new update to websrvr today which minifies and gzips css,
