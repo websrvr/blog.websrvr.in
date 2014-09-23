@@ -7,7 +7,7 @@ tags: performance, gzip, minification
 I have deployed a new update to websrvr today which minifies and gzips css,
 javascript and html files in our websites. You don't have to do anything to
 start using this feature. Just relax and enjoy the performance improvements :)
-I did a simple test on www.websrvr.in's home page (by the way www.websrvr.in is
+I did a simple test on [www.websrvr.in's](http://www.websrvr.in/) home page (by the way www.websrvr.in is
 also hosted on websrvr, How cool is that :) ) and the size of the page had
 reduced from **8799 to 2649** bytes which is a decrease in size by **70%**.
 
