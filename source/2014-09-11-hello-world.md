@@ -16,3 +16,8 @@ easy to setup. All I did was:
 That's it, now whenever I run `jekyll build` it exports this blog to the
 `blog` subdirectory in my dropbox folder which is hooked up via websrvr to
 show up at [http://blog.websrvr.in](http://blog.websrvr.in)
+
+####Update
+Since writing this blog post I have found [middleman](http://middlemanapp.com/)
+and I am in love with it :) this blog now uses middleman, you can find the
+source of this blog at http://github.com/websrvr/blog.websrvr.in
