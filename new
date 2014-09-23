@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+title = ARGV[0]
+categories = ARGV[1] || ''
+date = Time.now.strftime("%Y-%m-%d")
+content = File.read('./POST_TEMPLATE').gsub('TITLE', title).gsub('DATE', date).gsub('CATEGORIES', categories)
+filename = title.downcase.gsub(/[^a-z0-9]/, '-').gsub(/\-+/, '-')
+
+puts "writing ./source/#{date}-#{filename}.markdown"
+File.write("./source/#{date}-#{filename}.markdown", content)
