@@ -8,8 +8,14 @@
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
     <style type="text/css">
       body{padding-top: 60px;}
-      h1.page-header{margin-top: 0;}
+      .page-header{margin-top: 22px;}
       aside ul { list-style: none; }
+      .footer{
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: solid 2px #dddddd;
+        background-color: #eee;
+      }
     </style>
   </head>
   <body>
@@ -37,17 +43,22 @@
     </div>
 
     <div class='container'>
-      <% if current_page.respond_to? :title  %>
-        <h1 class="page-header"><%= current_page.title %></h1>
-    <% end %>
       <div class="row">
         <div class="col-md-8">
           <div id="main" role="main">
+
+          <% if current_page.respond_to? :title  %>
+            <h1 class="page-header"><%= current_page.title %></h1>
+          <% end %>
+
             <%= yield %>
           </div>
         </div>
         <div class="col-md-4">
           <aside>
+            <h2>About</h2>
+            <p>A blog about all things websrvr.</p>
+
             <h2>Recent Articles</h2>
             <ul>
               <% blog.articles[0...10].each do |article| %>
@@ -74,7 +85,54 @@
 
       </div>
 
-
     </div>
+
+      <div class="footer">
+        <div class="container">
+          <div class="row">
+            <div class='col-md-8 text-left'>
+              <p>
+                Built by
+                <a href="http://twitter.com/minhajuddin">@minhajuddin</a>
+                &middot;
+                <a href="http://twitter.com/websrvr">@websrvr</a>
+                &middot;
+                <a href="http://showcase.websrvr.in/">Showcase</a>
+                <br />
+                <a href="http://www.websrvr.in/about/">About</a>
+                &middot;
+                <a href="http://www.websrvr.in/pricing/">Pricing</a>
+                &middot;
+                <a href="http://www.websrvr.in/faq/">FAQ</a>
+                &middot;
+                <a href="http://www.websrvr.in/terms/">Terms of Service</a>
+                &middot;
+                <a href="http://www.websrvr.in/privacy/">Privacy Policy</a>
+                <br />
+                <a href="http://blog.websrvr.in/">Blog</a>
+                &middot;
+                <a href="http://docs.websrvr.in/">Documentation</a>
+                &middot;
+                <a href="mailto:support@websrvr.zendesk.com?subject=%5Bwebsrvr%5D Feedback">Send feedback</a>
+                &middot;
+                <a href="mailto:support@websrvr.zendesk.com?subject=%5Bwebsrvr%5D Support">Support</a>
+                &middot;
+                <a href="http://twitter.com/share?text=I+am+using+websrvr&url=https%3A%2F%2Fapp.websrvr.in">Tweet</a>
+                &middot;
+                <a href="https://plus.google.com/share?url=https%3A%2F%2Fapp.websrvr.in">Google+</a>
+                &middot;
+                <a href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fapp.websrvr.in">Facebook</a>
+                <br />
+                &copy; 2014 Cosmicvent Software Pvt Ltd. All rights reserved.
+              </p>
+            </div>
+            <div class='col-md-4 text-right'>
+              <a href="http://www.websrvr.in/"><img class='websrvr-badge' src="http://s3.amazonaws.com/websrvr/badges/websrvr-dark.png" alt="Powered by websrvr" title='Even this website is powered by websrvr. How cool is that?' /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
   </body>
 </html>
