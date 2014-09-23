@@ -7,3 +7,7 @@ gem "middleman-blog", "~> 3.5.3"
 
 # For feed.xml.builder
 gem "builder", "~> 3.0"
+
+#markdown and syntax highlighter
+gem 'redcarpet'
+gem 'middleman-syntax'
