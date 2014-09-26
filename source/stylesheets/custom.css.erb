@@ -1,0 +1,16 @@
+body{padding-top: 60px;}
+.page-header{margin-top: 22px;}
+aside ul { list-style: none; }
+.footer{
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: solid 2px #dddddd;
+  background-color: #eee;
+}
+<%= Rouge::Themes::Github.render(:scope => '.highlight') %>
+.highlight pre{border-radius: 0;}
+.highlight table tr td{padding:0;}
+.highlight table{
+  width: 100%;
+  overflow: scroll;
+}
